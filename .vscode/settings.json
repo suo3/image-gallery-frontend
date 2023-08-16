@@ -9,7 +9,7 @@
     "editor.defaultFormatter": "ms-python.autopep8",
     "editor.formatOnSave": true
   },
-  "python.formatting.provider": "black",
+  "python.formatting.provider": "none",
   "python.linting.pycodestyleEnabled": true,
   "python.linting.pycodestyleArgs": ["--max-line-length=88"],
   "python.linting.pylintEnable": true

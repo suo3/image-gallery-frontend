@@ -24,8 +24,7 @@ app.config["DEBUG"] = DEBUG
 def new_image():
     word = request.args.get("query")
     headers = {
-        "Accept-Version": "v1",
-        "Authorization": "Client-ID " + UNSPLASH_KEY
+        "Accept-Version": "v1", "Authorization": "Client-ID " + UNSPLASH_KEY
     }
     params = {
         "query": word
