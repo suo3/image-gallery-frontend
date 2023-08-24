@@ -5,9 +5,9 @@ from dotenv import load_dotenv
 
 load_dotenv(dotenv_path="./.env.local")
 
-MONGO_URL = os.environ.get("MONGO_URL", "mongo")
-MONGO_USERNAME = os.environ.get("MONGO_USERNAME", "root")
-MONGO_PASSWORD = os.environ.get("MONGO_PASSWORD", "")
+MONGO_URL = os.environ.get("MONGO_URL", "mongodb://localhost:27017")
+MONGO_USERNAME = os.environ.get("MONGO_USERNAME", "admin")
+MONGO_PASSWORD = os.environ.get("MONGO_PASSWORD", "pass")
 MONGO_PORT = os.environ.get("MONGO_PORT", 27017)
 
 
@@ -20,7 +20,6 @@ mongo_client = MongoClient(
 
 
 def insert_test_document():
-    """inserts sample document"""
     db = mongo_client.test
     test_collection = db.test_collection
     res = test_collection.insert_one({"name": "Sam", "instructor": "Sam Fox"})
